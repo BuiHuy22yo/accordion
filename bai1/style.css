@@ -1,0 +1,109 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.accordion {
+    max-width: 700px;
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: normal;
+    margin-bottom: 100px;
+}
+
+.accordion .inner {
+    padding: 15px;
+    background: #1e938a;
+}
+
+.accordion .accordion_item {
+    background: #47b3aa;
+}
+
+.accordion h1 {
+    text-align: center;
+    padding: 24px 0;
+}
+
+.accordion .heading {
+    color: #47b3aa;
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    padding: 20px 15px;
+    border-radius: 5px;
+    border-bottom: 2px solid #38A097;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.accordion .active .heading {
+    color: #619F9C;
+}
+
+.accordion .fa-minus {
+    display: none;
+}
+
+.accordion .fa-plus {
+    animation: fadeIn linear 0.5s;
+}
+
+.accordion .active .description {
+    display: block;
+    animation: slidedown linear 0.5s;
+    min-height: 110px;
+}
+
+.accordion .description {
+    color: #FFF;
+    padding: 20px 15px;
+    min-height: 0;
+    display: none;
+    animation: slideup 4s;
+}
+
+.accordion .active .fa-minus {
+    display: block;
+    animation: fadeIn linear 0.5s;
+}
+
+.accordion .active .fa-plus {
+    display: none;
+}
+
+@keyframes slidedown {
+    from {
+        opacity: 0;
+        transform: translate(0%, -70%);
+        min-height: 0;
+    }
+    to {
+        opacity: 1;
+        transform: translate(0%, 0%);
+        min-height: 110px;
+    }
+}
+
+@keyframes slideup {
+    from {
+        opacity: 1;
+        transform: translate(0%, 0%);
+    }
+    to {
+        opacity: 0;
+        transform: translate(0%, -100%);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
